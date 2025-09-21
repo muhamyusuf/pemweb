@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Details - Task 3</title>
+    <link rel="stylesheet" href="detail.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Registration Details</h2>
+
+      <!-- Displaying the query string data -->
+      <div class="detail-group">
+        <p><strong>Username:</strong> <span id="username-detail"></span></p>
+      </div>
+      <div class="detail-group">
+        <p>
+          <strong>Preferred Nickname:</strong>
+          <span id="nickname-detail"></span>
+        </p>
+      </div>
+      <div class="detail-group">
+        <p><strong>Favorite Color:</strong> <span id="color-detail"></span></p>
+      </div>
+      <div class="detail-group">
+        <p><strong>Motto or Quote:</strong> <span id="motto-detail"></span></p>
+      </div>
+      <div class="detail-group">
+        <p>
+          <strong>Hobby or Interest:</strong> <span id="hobby-detail"></span>
+        </p>
+      </div>
+      <div class="detail-group">
+        <p>
+          <strong>Dream Destination:</strong>
+          <span id="destination-detail"></span>
+        </p>
+      </div>
+
+      <a href="index.html" class="back-link">Back to homepage</a>
+    </div>
+
+    <script>
+      // Get the query string data from the URL
+      const urlParams = new URLSearchParams(window.location.search);
+
+      // Set the query string data into the HTML elements
+      document.getElementById("username-detail").textContent =
+        urlParams.get("username");
+      document.getElementById("nickname-detail").textContent =
+        urlParams.get("nickname");
+      document.getElementById("color-detail").textContent =
+        urlParams.get("color");
+      document.getElementById("motto-detail").textContent =
+        urlParams.get("motto");
+      document.getElementById("hobby-detail").textContent =
+        urlParams.get("hobby");
+      document.getElementById("destination-detail").textContent =
+        urlParams.get("destination");
+    </script>
+  </body>
+</html>
